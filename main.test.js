@@ -1,12 +1,71 @@
 /******************
  * YOUR CODE HERE *
  ******************/
+const addAll = numArr => numArr.reduce(( a, b ) => a + b, 0)
 
+const countSpaces = str => {
+  let count = 0
+  for (const letter of str) {
+    if (letter.includes(' ')) {
+    count++
+  }
+  }
+  return count
+}
 
+const countTrues = bool => {
+  let count = 0
+  for (const boo of bool) {
+    if (boo === true) {
+    count++
+  }
+  }
+  return count
+}
 
+const makeFriendly = par => {
+  let newPar = ''
+  for (const char of par) { 
+  newPar += char.replace('.', '!')
+  }
+  return newPar
+}
 
+const cubeAll = num => num.map(x => x ** 3)
 
+const addNoises = arr => {
+  let newArr = []
+  for (const animal of arr) {
+    if (animal.includes('Fido') || animal.includes('Maisie') || animal.includes('Rolph')) {
+      newArr.push(`${animal} says "Woof!"`)
+    } else if (animal.includes('Garfield') || animal.includes('Heathcliff')) {
+      newArr.push(`${animal} says "Meow!"`)
+    } else {
+      newArr.push(`${animal} says "ROWR."`)
+    }   
+  }
+  return newArr
+}
 
+const womenOnly = arr => {
+  let result = []
+  arr.forEach(i => {
+    if(i.includes('F')){
+      result.push(i)
+    }
+  })
+  return result
+}
+
+const integersOnly = arr => {
+  let result = []
+  for (const num of arr) {
+    if (Number.isInteger(num)) {
+      result.push(num)
+    }
+  }
+return result
+}
 
 /*********************************
  * OUR CODE BELOW; DO NOT TOUCH! *
